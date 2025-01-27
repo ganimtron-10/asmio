@@ -1,4 +1,10 @@
-default: helloworld64
+default: array
+
+array:
+	nasm -f elf array.asm -o array.o &&	ld -m elf_i386 array.o -o array && 	./array && rm array array.o
+
+
+
 
 helloworld32:
 	nasm -f elf hello32.asm -o hello32.o &&	ld -m elf_i386 hello32.o -o hello32 && 	./hello32 && rm hello32 hello32.o
