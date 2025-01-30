@@ -1,10 +1,13 @@
-default: pos_neg
+default: input
 
 array:
 	nasm -f elf array.asm -o array.o &&	ld -m elf_i386 array.o -o array && 	./array && rm array array.o
 
 pos_neg:
 	nasm -f elf array_posneg_count.asm -o array_posneg_count.o &&	ld -m elf_i386 array_posneg_count.o -o array_posneg_count && 	./array_posneg_count && rm array_posneg_count array_posneg_count.o
+
+input:
+	nasm -f elf input.asm -o input.o &&	ld -m elf_i386 input.o -o input && 	./input && rm input input.o
 
 
 
