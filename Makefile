@@ -1,4 +1,4 @@
-default: input
+default: input_number
 
 array:
 	nasm -f elf array.asm -o array.o &&	ld -m elf_i386 array.o -o array && 	./array && rm array array.o
@@ -9,6 +9,8 @@ pos_neg:
 input:
 	nasm -f elf input.asm -o input.o &&	ld -m elf_i386 input.o -o input && 	./input && rm input input.o
 
+input_number:
+	nasm -f elf input_number.asm -o input_number.o &&	ld -m elf_i386 input_number.o -o input_number && 	./input_number && rm input_number input_number.o
 
 
 helloworld32:
