@@ -1,4 +1,7 @@
-default: input_number
+default: multiply_successive_add
+
+multiply_successive_add:
+	nasm -f elf -g multiply_successive_add.asm -o multiply_successive_add.o &&	ld -m elf_i386 multiply_successive_add.o -o multiply_successive_add && 	./multiply_successive_add && rm multiply_successive_add multiply_successive_add.o
 
 array:
 	nasm -f elf array.asm -o array.o &&	ld -m elf_i386 array.o -o array && 	./array && rm array array.o
