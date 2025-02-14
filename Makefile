@@ -1,4 +1,7 @@
-default: multiply_successive_add
+default: multiply_add_and_shift
+
+multiply_add_and_shift:
+	nasm -f elf -g multiply_add_and_shift.asm -o multiply_add_and_shift.o &&	ld -m elf_i386 multiply_add_and_shift.o -o multiply_add_and_shift && 	./multiply_add_and_shift && rm multiply_add_and_shift multiply_add_and_shift.o
 
 multiply_successive_add:
 	nasm -f elf -g multiply_successive_add.asm -o multiply_successive_add.o &&	ld -m elf_i386 multiply_successive_add.o -o multiply_successive_add && 	./multiply_successive_add && rm multiply_successive_add multiply_successive_add.o
