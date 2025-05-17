@@ -1,5 +1,5 @@
 # asmio
-asmIO: Recording of whispers to computer in its own lang
+asmIO: Collection of whispers to computer in its own lang
 
 
 ### Resources:
